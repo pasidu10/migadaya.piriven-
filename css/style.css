@@ -230,3 +230,52 @@ nav .logo img {
   border: 2px solid gold;
   box-shadow: 0 0 10px gold;
 }
+
+
+body {
+  background: #0D0D0D; /* Dark base */
+  color: #F5F5F5;
+}
+
+/* Navigation */
+header {
+  background: linear-gradient(to right, #B22222, #FFD700, #1E3A8A, #228B22);
+  border-bottom: 3px solid #FFD700;
+}
+
+nav .logo {
+  color: #FFD700; /* Gold */
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #FFD700;
+  text-shadow: 0 0 10px #B22222;
+}
+
+/* Buttons */
+.enter-btn {
+  background: linear-gradient(90deg, #FFD700, #B22222, #1E3A8A, #228B22);
+  color: #0D0D0D;
+  font-weight: bold;
+  box-shadow: 0 0 15px #FFD700;
+}
+
+.enter-btn:hover {
+  background: #FFF;
+  color: #000;
+}
+
+/* Section Headings */
+.content-section h1,
+.gallery h1 {
+  color: #FFD700;
+  text-shadow: 0 0 12px #1E3A8A;
+}
+
+/* Gallery Hover */
+.gallery-grid img:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 20px #228B22;
+  border: 2px solid #FFD700;
+}

@@ -368,3 +368,50 @@ button {
 button:hover {
   background: #1e70d7;
 }
+
+
+<div class="buddha-container">
+  <img src="buddha-image.png" alt="Buddha" class="buddha-img" />
+  <div class="rays"></div>
+</div>
+```
+
+.buddha-container {
+  position: relative;
+  width: 200px;
+  margin: 0 auto 2rem;
+}
+
+.buddha-img {
+  width: 100%;
+  display: block;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 8px gold);
+  animation: gentleFloat 4s ease-in-out infinite;
+}
+
+.rays {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 250px;
+  height: 250px;
+  margin-left: -125px;
+  margin-top: -125px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 223, 0, 0.4) 0%, transparent 70%);
+  animation: raysRotate 20s linear infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes gentleFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes raysRotate {
+  from { transform: rotate(0deg);}
+  to { transform: rotate(360deg);}
+}
+```

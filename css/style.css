@@ -1,206 +1,149 @@
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
 body {
-  background: #111;
+  background: linear-gradient(to bottom, #0F2027, #203A43, #2C5364); /* Deep Blue Gradient */
   color: #fff;
   overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Navigation */
 header {
-  width: 100%;
+  background: rgba(15, 82, 186, 0.9);
   padding: 20px 50px;
-  background: rgba(0, 0, 0, 0.8);
   position: sticky;
   top: 0;
   z-index: 1000;
+  border-bottom: 2px solid #2ECC71;
+  backdrop-filter: blur(10px);
+  animation: fadeInDown 1.2s ease;
 }
 
 nav {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
 nav .logo {
-  color: gold;
+  display: flex;
+  align-items: center;
+  gap: 12px;
   font-size: 1.8rem;
   font-weight: bold;
+  color: #2ECC71;
+  text-shadow: 0 0 10px #2ECC71;
+}
+
+nav .logo img {
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid #2ECC71;
+  box-shadow: 0 0 12px #2ECC71;
 }
 
 nav ul {
   display: flex;
-  gap: 20px;
   list-style: none;
+  gap: 25px;
 }
 
 nav ul li a {
-  text-decoration: none;
   color: white;
+  text-decoration: none;
+  transition: 0.4s;
   font-weight: 500;
-  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-nav ul li a:hover,
-nav ul li a.active {
-  color: gold;
+nav ul li a:hover {
+  color: #2ECC71;
+  text-shadow: 0 0 15px #2ECC71;
   transform: scale(1.1);
 }
 
-/* Welcome Page */
+/* Welcome Section */
 .welcome-container {
   height: 100vh;
   background: url('../assets/images/bg.jpg') no-repeat center center/cover;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   position: relative;
 }
 
 .welcome-container .overlay {
+  background: rgba(0, 0, 0, 0.6);
   position: absolute;
-  top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0,0,0,0.6);
 }
 
 .welcome-container .content {
   text-align: center;
-  z-index: 1;
-  color: gold;
-  animation: fadeIn 2s ease;
+  color: #2ECC71;
+  z-index: 2;
+  animation: zoomIn 1.5s ease;
 }
 
 .title {
   font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  text-shadow: 0 0 20px #0F52BA;
 }
 
 .subtitle {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-  color: #eee;
+  font-size: 1.3rem;
+  color: #BDC3C7;
+  margin-bottom: 25px;
 }
 
 .enter-btn {
-  background: gold;
-  color: #111;
-  padding: 12px 25px;
+  background: linear-gradient(45deg, #2ECC71, #0F52BA);
+  padding: 14px 30px;
   border-radius: 30px;
+  color: white;
   text-decoration: none;
   font-weight: bold;
-  transition: 0.3s;
+  font-size: 1.1rem;
+  transition: 0.4s;
+  box-shadow: 0 0 20px #0F52BA;
 }
 
 .enter-btn:hover {
-  background: #fff;
-  color: #111;
-}
-
-/* Hero Section */
-.hero {
-  background: url('../assets/images/hero.jpg') center/cover no-repeat;
-  height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.hero-text h1 {
-  font-size: 2.8rem;
-  color: gold;
-  animation: slideUp 2s ease;
-}
-
-.hero-text p {
-  color: #eee;
-  margin-top: 20px;
-  font-size: 1.2rem;
-}
-
-/* Content Sections */
-.content-section {
-  padding: 60px 15%;
-  text-align: center;
-}
-
-.content-section h1 {
-  color: gold;
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.content-section p {
-  line-height: 1.7;
-  font-size: 1rem;
-  color: #ccc;
+  background: white;
+  color: #0F52BA;
+  box-shadow: 0 0 25px #2ECC71;
 }
 
 /* Gallery */
 .gallery {
-  padding: 60px 10%;
-  background: #222;
+  padding: 60px 8%;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  animation: fadeIn 2s ease;
 }
 
 .gallery h1 {
-  color: gold;
+  text-align: center;
+  color: #2ECC71;
   margin-bottom: 30px;
+  text-shadow: 0 0 15px #0F52BA;
 }
 
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 15px;
+  gap: 20px;
 }
 
 .gallery-grid img {
-  width: 100%;
-  border-radius: 12px;
+  border-radius: 15px;
   cursor: pointer;
-  transition: transform 0.4s, box-shadow 0.4s;
+  transition: 0.5s;
+  border: 2px solid #BDC3C7;
 }
 
 .gallery-grid img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px gold;
-}
-
-/* Lightbox */
-.lightbox {
-  display: none;
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.9);
-  align-items: center;
-  justify-content: center;
-  z-index: 2000;
-}
-
-.lightbox img {
-  max-width: 90%;
-  max-height: 90%;
-  border: 3px solid gold;
-  border-radius: 10px;
-}
-
-.lightbox .close {
-  position: absolute;
-  top: 20px;
-  right: 40px;
-  font-size: 40px;
-  color: white;
-  cursor: pointer;
+  transform: scale(1.08) rotate(1deg);
+  box-shadow: 0 0 30px #2ECC71;
+  border: 2px solid #2ECC71;
 }
 
 /* Animations */
@@ -209,73 +152,12 @@ nav ul li a.active {
   to {opacity: 1;}
 }
 
-@keyframes slideUp {
-  from {transform: translateY(50px); opacity: 0;}
-  to {transform: translateY(0); opacity: 1;}
-}
-/* Logo with Image */
-nav .logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 1.6rem;
-  font-weight: bold;
-  color: gold;
+@keyframes fadeInDown {
+  from {opacity: 0; transform: translateY(-50px);}
+  to {opacity: 1; transform: translateY(0);}
 }
 
-nav .logo img {
-  height: 50px;
-  width: auto;
-  border-radius: 50%;
-  border: 2px solid gold;
-  box-shadow: 0 0 10px gold;
-}
-
-
-body {
-  background: #0D0D0D; /* Dark base */
-  color: #F5F5F5;
-}
-
-/* Navigation */
-header {
-  background: linear-gradient(to right, #B22222, #FFD700, #1E3A8A, #228B22);
-  border-bottom: 3px solid #FFD700;
-}
-
-nav .logo {
-  color: #FFD700; /* Gold */
-}
-
-nav ul li a:hover,
-nav ul li a.active {
-  color: #FFD700;
-  text-shadow: 0 0 10px #B22222;
-}
-
-/* Buttons */
-.enter-btn {
-  background: linear-gradient(90deg, #FFD700, #B22222, #1E3A8A, #228B22);
-  color: #0D0D0D;
-  font-weight: bold;
-  box-shadow: 0 0 15px #FFD700;
-}
-
-.enter-btn:hover {
-  background: #FFF;
-  color: #000;
-}
-
-/* Section Headings */
-.content-section h1,
-.gallery h1 {
-  color: #FFD700;
-  text-shadow: 0 0 12px #1E3A8A;
-}
-
-/* Gallery Hover */
-.gallery-grid img:hover {
-  transform: scale(1.07);
-  box-shadow: 0 0 20px #228B22;
-  border: 2px solid #FFD700;
-}
+@keyframes zoomIn {
+  from {opacity: 0; transform: scale(0.8);}
+  to {opacity: 1; transform: scale(1);}
+  }

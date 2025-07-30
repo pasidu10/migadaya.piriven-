@@ -161,3 +161,78 @@ nav ul li a:hover {
   from {opacity: 0; transform: scale(0.8);}
   to {opacity: 1; transform: scale(1);}
   }
+
+
+
+
+body {
+  background: linear-gradient(to bottom, #1A1A2E, #16213E);
+  color: #E3FDFD;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Header */
+header {
+  background: rgba(26,26,46,0.8);
+  border-bottom: 3px solid #E94560;
+  padding: 20px 50px;
+  position: sticky; top: 0; z-index: 1000;
+  animation: fadeInDown 1.2s ease;
+}
+
+nav .logo span {
+  color: #58B19F;
+  font-size: 1.8rem; font-weight: bold;
+  text-shadow: 0 0 8px #58B19F;
+}
+
+nav ul li a:hover {
+  color: #E94560;
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+/* Buttons */
+.enter-btn {
+  background: linear-gradient(45deg, #E94560, #58B19F);
+  color: #1A1A2E;
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  box-shadow: 0 0 15px #58B19F;
+  transition: 0.4s;
+  animation: zoomIn 1.4s ease 0.3s both;
+}
+
+.enter-btn:hover {
+  background: #E3FDFD;
+  color: #1A1A2E;
+  box-shadow: 0 0 20px #E94560;
+}
+
+/* Headings */
+.content-section h1,
+.gallery h1 {
+  color: #E94560;
+  text-shadow: 0 0 10px #58B19F;
+  animation: fadeIn 1.5s ease 0.5s both;
+}
+
+/* Gallery hover */
+.gallery-grid img:hover {
+  transform: scale(1.08) rotate(0.5deg);
+  box-shadow: 0 0 25px #58B19F;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; } to { opacity: 1; }
+}
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale(0.8); } to { opacity: 1; transform: scale(1); }
+  }

@@ -213,3 +213,20 @@ nav ul li a.active {
   from {transform: translateY(50px); opacity: 0;}
   to {transform: translateY(0); opacity: 1;}
 }
+/* Logo with Image */
+nav .logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: gold;
+}
+
+nav .logo img {
+  height: 50px;
+  width: auto;
+  border-radius: 50%;
+  border: 2px solid gold;
+  box-shadow: 0 0 10px gold;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | Migadaya Siri Rathanapala Maha Pirivena</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <h2 class="logo">Pirivena</h2>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="history.html">History</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="staff.html">Staff</a></li>
+        <li><a href="developer.html">Developer</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="gallery">
+    <h1>Gallery</h1>
+    <div class="gallery-grid">
+      <!-- Example Images -->
+      <img src="assets/images/thumb1.jpg" data-src="assets/images/photo1.jpg" alt="Gallery" class="lazy">
+      <img src="assets/images/thumb2.jpg" data-src="assets/images/photo2.jpg" alt="Gallery" class="lazy">
+      <img src="assets/images/thumb3.jpg" data-src="assets/images/photo3.jpg" alt="Gallery" class="lazy">
+
+      <!-- Example Videos -->
+      <video class="lazy" controls width="100%" preload="none">
+        <source data-src="assets/videos/video1.mp4" type="video/mp4">
+      </video>
+      <video class="lazy" controls width="100%" preload="none">
+        <source data-src="assets/videos/video2.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
+
+  <!-- Lightbox for Fullscreen Preview -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img id="lightbox-img" src="" alt="Preview">
+  </div>
+
+  <script src="js/gallery.js"></script>
+</body>
+</html>

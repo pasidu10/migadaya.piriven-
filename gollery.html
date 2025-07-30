@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <h2 class="logo">Pirivena</h2>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="history.html">History</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="staff.html">Staff</a></li>
+        <li><a href="developer.html">Developer</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="gallery">
+    <h1>Gallery</h1>
+    <div class="gallery-grid">
+      <img src="assets/images/thumb1.jpg" data-src="assets/images/photo1.jpg" class="lazy" alt="Gallery">
+      <img src="assets/images/thumb2.jpg" data-src="assets/images/photo2.jpg" class="lazy" alt="Gallery">
+    </div>
+  </section>
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img id="lightbox-img" src="">
+  </div>
+  <script src="js/gallery.js"></script>
+</body>
+                                </html>

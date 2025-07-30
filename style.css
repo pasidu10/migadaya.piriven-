@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #111;
+  color: #eee;
+}
+
+header {
+  background: rgba(0,0,0,0.8);
+  padding: 15px 50px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  color: gold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: gold;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: url('../assets/images/bg.jpg') no-repeat center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  color: gold;
+  text-shadow: 0 0 20px black;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* Content Section */
+.content-section {
+  padding: 50px;
+  background: #1a1a1a;
+  border-radius: 12px;
+  margin: 20px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+}
+
+/* Gallery */
+.gallery {
+  padding: 40px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.4s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px gold;
+  }
